@@ -127,6 +127,7 @@ for (band in bandframe$ID)
     #Formation year is the fourth "dd" tag encountered in each page
     bandframe$Year[counter] <- html_text(html_nodes(current_page,"dd")[4])
   }
+  counter <- counter + 1
 }
 
 export(bandframe, "bandlistcomplete.csv")
